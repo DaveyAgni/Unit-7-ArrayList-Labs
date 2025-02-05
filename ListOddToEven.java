@@ -7,14 +7,14 @@ import java.util.ArrayList;
 
 public class ListOddToEven
 {
-	public static int go( ArrayList<Integer> ray )
+	public static int goList( ArrayList<Integer> ray )
 	{
         int odd = -1;
         int even = -1;
 
         for (int i = 0; i < ray.size(); i++)
         {
-            if (ray.get(i) % 2 == 1)
+            if ((ray.get(i) % 2) == 1)
             {
                 odd = i;
                 break;
@@ -26,7 +26,7 @@ public class ListOddToEven
             return -1;
         }
 
-        for (int i = odd + 1; i < ray.size(); i++)
+        for (int i = ray.size() - 1; i >=0; i--)
         {
             if (ray.get(i) % 2 == 0)
             {
