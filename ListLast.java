@@ -10,6 +10,15 @@ public class ListLast
 {
 	public static boolean go( List<Integer> ray)
 	{
-		return true;
+        int i = ray.get(ray.size() -1);
+
+        for(int c = 0; c < ray.size()-1; c++)
+        {
+            if(ray.get(c) == i)
+            {
+                return true;
+            }
+        }
+		return false;
 	}
 }
